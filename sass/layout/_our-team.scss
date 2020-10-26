@@ -2,8 +2,6 @@
   background-color: #F5F4FA;
 
   &__list {
-    display: flex;
-    justify-content: space-between;
     text-align: center;
   }
 
@@ -11,34 +9,32 @@
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   &__img {
-    width: 270px;
+    width: 450px;
   }
 
   &__content {
     padding-top: 30px;
-    padding-right: 32px;
-    padding-bottom: 30px;
-    padding-left: 32px;
+    padding-right: 122px;
+    padding-bottom: 24px;
+    padding-left: 122px;
   }
 
   &__name {
     margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.186;
+    @include font(500, 16px, 19px, $title-white-theme-color);
     letter-spacing: 0.03em;
-    color: $title-white-theme-color;
   }
 
   &__position {
     margin-bottom: 16px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.186;
+    @include font(400, 16px, 19px, $text-white-theme-color);
     letter-spacing: 0.03em;
-    color: $text-white-theme-color;
   }
 }

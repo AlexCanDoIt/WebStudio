@@ -1,16 +1,20 @@
 .benefits {
-  &__list {
-    display: flex;
-    justify-content: space-between;
-  }
+  // &__list {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 
   &__item {
-    width: calc((100% - 3 * 30px) / 4);
+    // width: calc((100% - 3 * 30px) / 4);
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
 
     &::before {
       content: "";
       display: block;
-      width: 270px;
+      width: 450px;
       height: 120px;
       margin-bottom: 30px;
       border-radius: 4px;
@@ -46,20 +50,15 @@
   }
 
   &__title {
+    text-align: center;
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.143;
+    @include font(700, 14px, 16px, $title-white-theme-color);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: $title-white-theme-color;
   }
 
   &__text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
+    @include font(400, 14px, 24px, $text-white-theme-color);
     letter-spacing: 0.03em;
-    color: $text-white-theme-color;
   }
 }

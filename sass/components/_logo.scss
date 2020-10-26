@@ -1,10 +1,7 @@
 .logo {
+  @include font(700, 24px, 28px, $accent-color);
   font-family: $secondary-font;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
   letter-spacing: 0.03em;
-  color: $accent-color;
 
   &--dark {
     color: #000000;

@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/visually-hidden";
+@import "./utils/mixins";
 
 @import "./base/fonts";
 @import "./base/normalise";
@@ -11,14 +12,14 @@
 @import "./components/button";
 @import "./components/title";
 @import "./components/social-link";
-@import "./components/backdrop";
-@import "./components/modal";
-@import "./components/form";
+// @import "./components/backdrop";
+// @import "./components/modal";
+// @import "./components/form";
 
 @import "./layout/header";
 @import "./layout/hero";
 @import "./layout/benefits";
 @import "./layout/about-us";
 @import "./layout/our-team";
-@import "./layout/regular-customers";
-@import "./layout/footer";
+// @import "./layout/regular-customers";
+// @import "./layout/footer";
