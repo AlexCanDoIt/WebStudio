@@ -1,0 +1,65 @@
+.benefits {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc((100% - 3 * 30px) / 4);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 270px;
+      height: 120px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      background-color: #F5F4FA;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70px 70px;
+    }
+
+    &:nth-child(1) {
+      &::before {
+        background-image: url(../images/main/index/icon-satellite-dish.svg);
+      }
+    }
+    
+    &:nth-child(2) {
+      &::before {
+        background-image: url(../images/main/index/icon-clock.svg);
+      }
+    }
+    
+    &:nth-child(3) {
+      &::before {
+        background-image: url(../images/main/index/icon-laptop.svg);
+      }
+    }
+    
+    &:nth-child(4) {
+      &::before {
+        background-image: url(../images/main/index/icon-astronaut.svg);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $title-white-theme-color;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: $text-white-theme-color;
+  }
+}
