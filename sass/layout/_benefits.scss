@@ -1,12 +1,5 @@
 .benefits {
-  // &__list {
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
-
   &__item {
-    // width: calc((100% - 3 * 30px) / 4);
-
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -14,7 +7,6 @@
     &::before {
       content: "";
       display: block;
-      width: 450px;
       height: 120px;
       margin-bottom: 30px;
       border-radius: 4px;

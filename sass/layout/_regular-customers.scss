@@ -1,15 +1,22 @@
 .customers {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin: -15px;
+  }
+
+  &__item {
+    width: calc((100% - 4 * 15px) / 2);
+    height: 90px;
+    margin: 15px;
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 90px;
+    height: 100%;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #AFB1B8;
@@ -20,5 +27,9 @@
       border-color: $accent-color;
       fill: $accent-color;
     }
+  }
+
+  &__icon {
+    display: block;
   }
 }
