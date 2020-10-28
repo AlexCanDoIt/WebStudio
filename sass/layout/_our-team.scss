@@ -18,11 +18,9 @@
   &__content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-right: 122px;
-    padding-bottom: 24px;
-    padding-left: 122px;
+    height: 162px;
   }
 
   &__name {

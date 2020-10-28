@@ -620,6 +620,10 @@ body {
   font-style: normal;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .list {
   list-style: none;
 }
@@ -700,6 +704,9 @@ body {
 .social-icon {
   display: flex;
   justify-content: space-between;
+  width: 206px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .social-icon__link {
@@ -732,6 +739,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -745,8 +753,8 @@ body {
   top: 50%;
   left: 50%;
   padding: 40px;
-  min-width: 528px;
-  min-height: 580px;
+  min-width: 450px;
+  min-height: 608px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: #FFFFFF;
@@ -789,23 +797,21 @@ body {
   display: block;
   text-align: center;
   margin-bottom: 30px;
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
+  line-height: 1.5;
   color: #212121;
+  letter-spacing: 0.03em;
 }
 
 .form__label {
   position: relative;
   margin-bottom: 28px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.166;
-  letter-spacing: 0.01em;
+  line-height: 1.16667;
   color: #757575;
+  letter-spacing: 0.01em;
 }
 
 .form__label:nth-child(5) {
@@ -859,7 +865,7 @@ body {
 
 .form__input-comment {
   resize: none;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -893,15 +899,13 @@ body {
 .form__label-policy {
   position: relative;
   display: inline-block;
-  padding-left: 36px;
+  padding-left: 24px;
   margin-bottom: 30px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.16667;
   color: #757575;
+  letter-spacing: 0.03em;
 }
 
 .form__label-policy > .form__link-policy {
@@ -911,7 +915,7 @@ body {
 .form__icon-policy {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 0;
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -985,9 +989,13 @@ body {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding-top: 118px;
-  padding-bottom: 118px;
+  max-width: 480px;
+  height: 400px;
+  margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main/index/hero-480-400.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -1084,11 +1092,9 @@ body {
 .team__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 30px;
-  padding-right: 122px;
-  padding-bottom: 24px;
-  padding-left: 122px;
+  height: 162px;
 }
 
 .team__name {
@@ -1193,5 +1199,74 @@ body {
 
 .footer .address__link--white {
   color: #ffffff;
+}
+
+.footer__social {
+  margin-bottom: 60px;
+}
+
+.footer-form__input {
+  width: 100%;
+  height: 50px;
+  padding-left: 15px;
+  margin-right: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form__input:focus {
+  border-color: #2196F3;
+  outline: none;
+}
+
+.footer-form__input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-form__input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form__button {
+  position: relative;
+  text-align: left;
+  width: 200px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #2196F3;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+}
+
+.footer-form__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/footer/icon-send.svg);
+  pointer-events: none;
+  transform: translate(0, -50%);
 }
 /*# sourceMappingURL=main.css.map */

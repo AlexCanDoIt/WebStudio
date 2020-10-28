@@ -1,8 +1,12 @@
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url("../images/main/index/hero-480-400.jpg");
+  max-width: 480px;
+  height: 400px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main/index/hero-480-400.jpg");
   background-repeat: no-repeat;
   background-position: center center;
 
