@@ -1,12 +1,7 @@
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
-  max-width: 480px;
-  height: 400px;
-  margin: 0 auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main/index/hero-480-400.jpg");
+  padding: 118px 0;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main/index/hero-1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
 
@@ -20,5 +15,26 @@
     @include font(900, 26px, 42px, $title-dark-theme-color);
     letter-spacing: 0.06em;
     text-transform: uppercase;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__container {
+      padding-right: 204px;
+      padding-left: 204px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+
+    &__container {
+      padding-right: 252px;
+      padding-left: 252px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 60px;
+    }
   }
 }
