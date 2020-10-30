@@ -20,6 +20,18 @@
 
   &__icon-cross {
     display: none;
+
+    .header__menu-button:hover &,
+    .header__menu-button:focus & {
+      fill: $accent-color;
+    }
+  }
+
+  &__icon-menu {
+    .header__menu-button:hover &,
+    .header__menu-button:focus & {
+      fill: $accent-color;
+    }
   }
 
   &__menu-button.is-open &__icon-cross {

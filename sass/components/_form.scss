@@ -142,4 +142,26 @@
   &__submit-button {
     margin: 0 auto;
   }
+
+  @media screen and (max-width: 1199px) {
+    &__input-comment {
+      @include font(400, 14px, 16px, #000);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__title {
+      line-height: 1.15;
+    }
+
+    &__label-policy {
+      padding-left: 36px;
+      font-size: 14px;
+      line-height: 1.714;
+    }
+
+    &__icon-policy {
+      left: 12px;
+    }
+  }
 }
