@@ -1,6 +1,10 @@
+/* ========== Social Links ========== */
 .social-icon {
   display: flex;
   justify-content: center;
+  width: 206px;
+  margin-left: auto;
+  margin-right: auto;
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -28,3 +32,4 @@
     }
   }
 }
+/* ========== End Social Links ========== */

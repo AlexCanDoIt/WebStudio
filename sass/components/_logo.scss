@@ -1,3 +1,4 @@
+/* ========== Logo ========== */
 .logo {
   @include font(700, 24px, 28px, $accent-color);
   font-family: $secondary-font;
@@ -10,9 +11,12 @@
   &--white {
     color: #ffffff;
   }
+}
 
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .logo {
     font-size: 26px;
     line-height: 1.192;
   }
 }
+/* ========== End Logo ========== */

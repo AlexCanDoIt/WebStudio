@@ -1,9 +1,6 @@
+/* ========== Benefits ========== */
 .benefits {
   &__item {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-
     &::before {
       content: "";
       display: block;
@@ -18,25 +15,25 @@
 
     &:nth-child(1) {
       &::before {
-        background-image: url(../images/main/index/icon-satellite-dish.svg);
+        background-image: url(../images/main/index/benefits/icon-satellite-dish.svg);
       }
     }
     
     &:nth-child(2) {
       &::before {
-        background-image: url(../images/main/index/icon-clock.svg);
+        background-image: url(../images/main/index/benefits/icon-clock.svg);
       }
     }
     
     &:nth-child(3) {
       &::before {
-        background-image: url(../images/main/index/icon-laptop.svg);
+        background-image: url(../images/main/index/benefits/icon-laptop.svg);
       }
     }
     
     &:nth-child(4) {
       &::before {
-        background-image: url(../images/main/index/icon-astronaut.svg);
+        background-image: url(../images/main/index/benefits/icon-astronaut.svg);
       }
     }
   }
@@ -54,3 +51,37 @@
     letter-spacing: 0.03em;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .benefits {
+    &__item {
+      &:not(:last-child) {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+
+    &__item {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits {
+    &__list {
+      flex-wrap: nowrap;
+    }
+  }
+}
+/* ========== End Benefits ========== */

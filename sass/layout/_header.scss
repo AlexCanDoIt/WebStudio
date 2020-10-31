@@ -1,3 +1,4 @@
+/* ========== Header ========== */
 .header {
   position: relative;
 
@@ -21,8 +22,8 @@
   &__icon-cross {
     display: none;
 
-    .header__menu-button:hover &,
-    .header__menu-button:focus & {
+    .header__menu-button.is-open:hover &,
+    .header__menu-button.is-open:hover & {
       fill: $accent-color;
     }
   }
@@ -46,61 +47,56 @@
     content: "";
     position: absolute;
     bottom: 0;
+    z-index: -1;
     display: block;
     width: 100%;
     border-bottom: 1px solid #ECECEC;
   }
+}
 
-  @media screen and (max-width: 767px) {
-    &__menu-container {
-      display: none;
-  
-      &.is-open {
-        position: absolute;
-        bottom: 0;
-        display: block;
-        padding: 140px 60px;
-        background: #fff;
-        transform: translateY(100%);
-      }
+@media screen and (max-width: 767px) {
+.header {
+  &__menu-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #fff;
+
+    &.is-open {
+      display: block;
     }
   }
+}
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .header {
     &__menu-button {
       display: none;
     }
-
+  
     &__container {
       height: 80px;
     }
-
+  
     &__menu-container {
       display: flex;
       align-items: center;
     }
   }
 }
+/* ========== End Header ========== */
 
+/* ========== Navigation ========== */
 .navigation {
-  margin-right: 84px;
-
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-  }
-
   &__link {
     position: relative;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    @include font(500, 14px, 16px, $title-white-theme-color);
+    display: inline-block;
+    @include font(500, 18px, 21px, $title-white-theme-color);
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -111,13 +107,14 @@
   }
 
   &__link--active {
+    padding-bottom: 12px;
     color: $accent-color;
 
     &::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -1px;
+      bottom: 0;
       display: block;
       width: 100%;
       height: 4px;
@@ -125,19 +122,59 @@
       background-color: $accent-color;
     }
   }
+}
 
-  @media screen and (min-width: 1200px) {
-    margin-right: 305px;
+@media screen and (max-width: 767px) {
+  .navigation {
+    text-align: center;
+    margin-bottom: 60px;
+  
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
   }
 }
 
+@media screen and (min-width: 768px) {
+  .navigation {
+    margin-right: 84px;
+
+    &__list {
+      display: flex;
+    }
+  
+    &__item {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      line-height: 1.143;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation {
+    margin-right: 304px;
+  }
+}
+/* ========== End Navigation ========== */
+
+/* ========== Header Address ========== */
 .header-address {
   font-style: normal;
 
   &__link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    @include font(500, 12px, 14px, $text-white-theme-color);
+    @include font(500, 18px, 21px, $text-white-theme-color);
     letter-spacing: 0.02em;
     fill: $text-white-theme-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -150,32 +187,67 @@
   }
 
   &__icon {
-    padding: 0;
+    display: block;
     margin-right: 10px;
-    border: none;
   }
+}
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
+  .header-address {
     &__item {
       &:first-child {
         margin-bottom: 10px;
       }
     }
   }
+}
 
-  @media screen and (min-width: 1200px) {
-    &__list {
-      display: flex;
-      align-items: center;
-    }
+@media screen and (max-width: 767px) {
+  .header-address {
+    text-align: center;
 
     &__item {
-      margin-right: 30px;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .header-address {
+    &__link {
+      display: flex;
+      font-size: 12px;
+      line-height: 1.167;
+    }
+  
+    &__icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-address {
+    &__list {
+      display: flex;
+    }
+  
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  
     &__link {
       font-size: 14px;
       line-height: 1.143;
     }
+  
+    &__icon {
+      margin-right: 10px;
+    }
   }
 }
+/* ========== End Header Address ========== */
