@@ -748,7 +748,7 @@ body.modal-open {
 /* ========== Social Links ========== */
 .social-icon {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 206px;
   margin-left: auto;
   margin-right: auto;
@@ -1540,4 +1540,217 @@ body.modal-open {
 }
 
 /* ========== End Our Team Section ========== */
+.customers__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.customers__item {
+  width: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
+}
+
+.customers__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  fill: #AFB1B8;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers__link:hover, .customers__link:focus {
+  border-color: #2196F3;
+  fill: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .customers__item {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers__list {
+    flex-wrap: nowrap;
+  }
+}
+
+.footer {
+  background-color: #2F303A;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer .footer__address-container {
+  text-align: center;
+}
+
+.footer .footer__social-container {
+  text-align: center;
+}
+
+.footer__title {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14286;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.address {
+  font-style: normal;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.address__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71429;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address__link:hover, .address__link:focus {
+  color: #2196F3;
+}
+
+.address__link--white {
+  color: #ffffff;
+}
+
+.footer-form {
+  text-align: center;
+}
+
+.footer-form__input {
+  height: 50px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form__input:focus {
+  border-color: #2196F3;
+  outline: none;
+}
+
+.footer-form__input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-form__input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form__button {
+  position: relative;
+  text-align: left;
+  width: 200px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #2196F3;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+}
+
+.footer-form__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/footer/icon-send.svg);
+  pointer-events: none;
+  transform: translate(0, -50%);
+}
+
+@media screen and (max-width: 767px) {
+  .footer__address-container {
+    margin-bottom: 60px;
+  }
+  .footer__social-container {
+    margin-bottom: 60px;
+  }
+  .footer-form__input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__address-social-container {
+    margin: 60px;
+  }
+  .footer-form__input {
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__address-social-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .footer__address-container {
+    text-align: left;
+    margin-right: 70px;
+  }
+  .footer__address-social-container {
+    text-align: left;
+  }
+  .footer-form {
+    text-align: left;
+  }
+  .footer-form__input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
 /*# sourceMappingURL=main.css.map */
