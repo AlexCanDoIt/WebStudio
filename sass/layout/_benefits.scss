@@ -52,7 +52,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .benefits {
     &__item {
       &:not(:last-child) {
@@ -62,7 +62,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits {
     &__list {
       display: flex;
@@ -74,10 +74,14 @@
       width: calc((100% - 4 * 15px) / 2);
       margin: 15px;
     }
+
+    &__title {
+      text-align: left;
+    }
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .benefits {
     &__list {
       flex-wrap: nowrap;

@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .team {
     &__item {
       &:not(:last-child) {
@@ -37,7 +37,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .team {
     &__list {
       display: flex;
@@ -52,7 +52,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .team {
     &__list {
       flex-wrap: nowrap;

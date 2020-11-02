@@ -54,26 +54,27 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-.header {
-  &__menu-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #fff;
+@media screen and (max-width: 768px) {
+  .header {
+    &__menu-container {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 100;
+      display: none;
+      width: 100%;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      background-color: #fff;
 
-    &.is-open {
-      display: block;
+      &.is-open {
+        display: block;
+      }
     }
   }
 }
-}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header {
     &__menu-button {
       display: none;
@@ -124,7 +125,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .navigation {
     text-align: center;
     margin-bottom: 60px;
@@ -137,7 +138,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .navigation {
     margin-right: 84px;
 
@@ -160,7 +161,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .navigation {
     margin-right: 304px;
   }
@@ -188,11 +189,13 @@
 
   &__icon {
     display: block;
+    width: 16px;
+    height: 11px;
     margin-right: 10px;
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .header-address {
     &__item {
       &:first-child {
@@ -202,7 +205,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header-address {
     text-align: center;
 
@@ -214,7 +217,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header-address {
     &__link {
       display: flex;
@@ -225,10 +228,20 @@
     &__icon {
       margin-right: 8px;
     }
+
+    &__icon-tel {
+      width: 14px;
+      height: 10px;
+    }
+  
+    &__icon-mail {
+      width: 10px;
+      height: 14px;
+    }
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .header-address {
     &__list {
       display: flex;
@@ -247,6 +260,16 @@
   
     &__icon {
       margin-right: 10px;
+    }
+
+    &__icon-tel {
+      width: 16px;
+      height: 12px;
+    }
+  
+    &__icon-mail {
+      width: 10px;
+      height: 16px;
     }
   }
 }

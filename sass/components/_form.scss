@@ -145,7 +145,7 @@
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .form {
     &__input-comment {
       @include font(400, 14px, 16px, #000);
@@ -153,7 +153,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .form {
     &__title {
       line-height: 1.15;
