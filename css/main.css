@@ -639,6 +639,11 @@ body.modal-open {
   height: auto;
 }
 
+html {
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+}
+
 /* ========== End Common ========== */
 /* ========== Section ========== */
 .section {
